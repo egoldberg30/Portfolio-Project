@@ -1,0 +1,132 @@
+/* =============
+    Header
+============= */
+header{
+    background-color: white;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.13);
+    width: 100vw;
+    height: 60px;
+    z-index: 500;
+    position: fixed;
+    display: grid;
+    grid-template-areas: ". headercontents .";
+    grid-template-columns: auto 100% auto;
+    top: 0;
+
+    #header-contents{
+        grid-area: headercontents;
+        display: grid;
+        grid-template-areas: "logo . burger";
+        grid-template-columns: 300px auto 115px;
+
+        @include lg{
+            grid-area: headercontents;
+            display: grid;
+            grid-template-areas: "logo . nav";
+            grid-template-columns: 300px auto 60vw;
+        }
+
+        #logo-container {
+            grid-area: logo;
+            padding-left: 75px;
+            padding-top: 19px;
+            padding-right: 0px;
+        }
+
+        #burger-container {
+            grid-area: burger;
+            justify-content: flex-end;
+            align-items: center;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            z-index: 1500;
+            padding-top: 5px;
+            padding-left: 30vw;
+
+            @include md{
+                padding-left: 40vw;
+            }
+    
+            @include lg{
+                display: none !important;
+            }
+    
+            #hamburger_icon{
+                height: 40px;
+                width: 40px;
+                padding-right: 10vw;
+
+                @include md{
+                    padding-right: 75px;  
+                }
+            }
+        }
+
+        #nav-container {
+            background-color: white;
+            grid-area: nav;
+            height: 100vh;
+            right: 0;
+            top: 60px;
+    
+            @include md{
+                height: 100%;
+                width: 100%;
+            }
+
+            @include lg{
+                display: grid;
+                grid-template-areas: "links icons";
+                grid-template-columns: 50% 50%;
+                grid-area: nav;
+                display: inline-flex !important;
+            }
+
+            #navlinks{
+                grid-area: links;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                padding-right: 25px;
+
+                @include lg{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    padding-top: 0;
+                }
+            }
+
+            #social-icons{
+                grid-area: icons;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+
+                .linkedin-icon{
+                    height: 23px;
+                }
+
+                .email-icon{
+                    height: 23px;
+                }
+
+                .instagram-icon{
+                    height: 24px;
+                }
+            }
+
+            .nav-links:hover,
+            .nav-links:active{
+                color: $gold;    
+            }
+        }
+    }
+}

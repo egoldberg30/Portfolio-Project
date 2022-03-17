@@ -1,0 +1,35 @@
+/* =============
+    Base
+============= */
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.instagram-icon:hover,
+.instagram-icon:active{
+    fill: $gold;
+}
+
+.linkedin-icon:hover,
+.linkedin-icon:active{
+    fill: $gold;
+}
+
+.email-icon:hover,
+.email-icon:active{
+    fill: $gold;
+}

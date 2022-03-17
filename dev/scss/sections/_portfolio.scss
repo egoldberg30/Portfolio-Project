@@ -1,0 +1,89 @@
+#portfolio{
+    width: 100vw;
+    padding-top: 60px;
+
+    #images{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 50vw);
+
+        @include md{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 33.333vw);
+        }
+
+        @include lg{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 25vw);
+        }
+
+        .project-images{
+            height: 100%;
+            width: 100%;
+            object-fit: 100%;
+        }
+    
+        #project1{
+            background-image: url("../img/project-images/Mumbai.png");
+            background-position: center;
+            background-size: cover;
+        }
+        #project2{
+            background-image: url("../img/project-images/OrchestraPoster.gif");
+            background-position: center;
+            background-size: cover;
+        }
+        #project3{
+            background-image: url("../img/project-images/CollabFest.png");
+            background-position: center;
+            background-size: cover;
+        }
+        #project4{
+            background-image: url("../img/project-images/Albertsons.gif");
+            background-position: center;
+            background-size: cover;
+        }
+        #project5{
+            background-image: url("../img/project-images/Moose.png");
+            background-position: center;
+            background-size: cover;
+        }
+        #project6{
+            background-image: url("../img/project-images/Juicebox.png");
+            background-position: center;
+            background-size: cover;
+        }
+        #project7{
+            background-image: url("../img/project-images/JeanneGangPoster.png");
+            background-position: center;
+            background-size: cover;
+        }
+        #project8{
+            background-image: url("../img/project-images/Nickelodeo.png");
+            background-position: center;
+            background-size: cover;
+        }
+        #project9{
+            background-image: url("../img/project-images/MutterMuseum.gif");
+            background-position: center;
+            background-size: cover;
+        }
+        #project10{
+            background-image: url("../img/project-images/RamahFlags.png");
+            background-position: center;
+            background-size: cover;
+        }
+        #project11{
+            background-image: url("../img/project-images/YourHeartIsMyPinata.png");
+            background-position: center;
+            background-size: cover;
+        }
+        #project12{
+            background-image: url("../img/project-images/StrikingOutTheLineup.png");
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+/* =============
+    Navigation
+============= */
+#nav-container{
+
+    li{
+        margin-top: 50px;
+        line-height: 1.5rem;
+
+        @include lg{
+            align-items: center;
+            display: flex; 
+            margin-bottom: 0px;
+            margin-top: 0px;
+            line-height: 1rem;
+        }
+
+        a{
+            text-align: center;
+            font-family: "Helvetica Neue";
+            font-weight: medium;
+            font-size: rem-calc(16);
+            color: black;
+        }
+    }
+
+    #social-icons{
+        background-color: white;
+    }
+}

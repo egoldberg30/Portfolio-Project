@@ -1,0 +1,65 @@
+#aboutme{
+    display: grid;
+    grid-template-areas: ". aboutmecontent .";
+    grid-template-columns: auto 75vw auto;
+
+    #aboutme_content{
+        grid-area: aboutmecontent;
+        padding-top: 120px;
+        padding-bottom: 60px;
+
+        @include md{
+            display: grid;
+            grid-template-areas: "headshot type";
+            grid-template-columns: 50% 50%;
+        }
+
+        @include xl{
+            padding-left: 125px;
+            padding-right: 125px;
+        }
+
+        #headshot{
+            width: 100%;
+
+            @include md{
+                grid-area: headshot;
+            }
+        }
+
+        #caption{
+            padding-top: 25px;
+            padding-bottom: 50px;
+            
+            @include md{
+                grid-area: type;
+                padding-top: 0px;
+                padding-left: 50px;
+                padding-right: 0px;
+            }
+
+            #social-media-icons{
+                display: flex;
+                padding-top: 25px;
+                justify-content: space-evenly;
+                align-items: center;
+    
+                @include xl{
+                    width: 300px;
+                }
+    
+                .linkedin-icon{
+                    height: 40px;
+                }
+    
+                .email-icon{
+                    height: 40px;
+                }
+    
+                .instagram-icon{
+                    height: 42px;
+                }
+            }
+        }
+    }
+}
